@@ -15,6 +15,7 @@ import RootLayout from './pages/layouts/root.layout';
 import ProfilePage from './pages/admin/profile.page';
 import DashboardPage from './pages/admin/dashboard.page';
 import AdminLayout from './pages/layouts/admin.layout';
+import ProductPage from './pages/admin/product.page';
 
 const App = () => {
   return (
@@ -65,6 +66,10 @@ const App = () => {
           <Route
             path='profile'
             element={<ProfilePage />}
+          />
+          <Route
+            path='products/:id'
+            element={<ProductPage />}
           />
         </Route>
       </Route>
