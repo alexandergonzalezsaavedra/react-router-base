@@ -68,7 +68,8 @@ const App = () => {
             element={<ProfilePage />}
           />
           <Route
-            path='products/:id'
+            // parametros opcionales ? al final del parametro, ejemplo -> :id?
+            path='products/:name/:id?'
             element={<ProductPage />}
           />
         </Route>

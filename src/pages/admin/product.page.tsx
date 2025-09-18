@@ -8,7 +8,8 @@ const ProductPage = () => {
     <div>
       {/* <pre>{JSON.stringify(params)}</pre> */}
       <h1>Product page</h1>
-      <p>Product ID: {params.id}</p>
+      <p>Product Name: {params?.name}</p>
+      <p>Product ID: {params?.id}</p>
     </div>
   );
 };
