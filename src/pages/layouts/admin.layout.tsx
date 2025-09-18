@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from 'react-router';
+import AdminNavbar from '../../components/admin-navbar';
 
 const AdminLayout = () => {
   const location = useLocation();
@@ -6,8 +7,14 @@ const AdminLayout = () => {
 
   return (
     <div>
-      <header>Admin header</header>
+      <header>
+        <AdminNavbar />
+      </header>
+      <br />
+      <pre>{JSON.stringify(location)}</pre>
       {location.pathname}
+      <br />
+      <br />
       <p>🐶 Bienvenido, soy el admin layout</p>
       <main>
         <Outlet />

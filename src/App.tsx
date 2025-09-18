@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router';
 import PublicLayout from './pages/layouts/public.layout';
 import HomePage from './pages/public/home.page';
 import AboutPage from './pages/public/about.page';
+import NotFound from './pages/public/not-found';
 
 // auth
 import AuthLayout from './pages/layouts/auth.layout';
@@ -73,6 +74,11 @@ const App = () => {
             element={<ProductPage />}
           />
         </Route>
+
+        <Route
+          path='*'
+          element={<NotFound />}
+        />
       </Route>
     </Routes>
   );
