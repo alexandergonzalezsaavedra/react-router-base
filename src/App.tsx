@@ -11,6 +11,11 @@ import LoginPage from './pages/auth/login.page';
 import RegisterPage from './pages/auth/register.page';
 import RootLayout from './pages/layouts/root.layout';
 
+// admin
+import ProfilePage from './pages/admin/profile.page';
+import DashboardPage from './pages/admin/dashboard.page';
+import AdminLayout from './pages/layouts/admin.layout';
+
 const App = () => {
   return (
     <Routes>
@@ -27,14 +32,39 @@ const App = () => {
           />
         </Route>
 
-        <Route element={<AuthLayout />}>
+        <Route
+          path='auth'
+          element={<AuthLayout />}
+        >
           <Route
             path='login'
             element={<LoginPage />}
           />
           <Route
+            index
+            element={<div>Auth index page</div>}
+          />
+          <Route
             path='register'
             element={<RegisterPage />}
+          />
+        </Route>
+
+        <Route
+          path='admin'
+          element={<AdminLayout />}
+        >
+          <Route
+            index
+            element={<div>👍🏽 Admin index page</div>}
+          />
+          <Route
+            path='dashboard'
+            element={<DashboardPage />}
+          />
+          <Route
+            path='profile'
+            element={<ProfilePage />}
           />
         </Route>
       </Route>
